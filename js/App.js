@@ -29,8 +29,8 @@ doingColumn.createCard(card2);
 
 var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
 var myHeaders = {
-  'X-Client-Id': 'X-Client-Id',
-  'X-Auth-Token': 'X-Auth-Token'
+  'X-Client-Id': '2606',
+  'X-Auth-Token': '81a96d5fa442ec1461df9463bbb841e7'
 };
 
 $.ajaxSetup({
