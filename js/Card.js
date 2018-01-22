@@ -3,7 +3,7 @@ function Card(id, name) {
 	var self = this;
 	
 	this.id = id /*zamiast funkcji randomString()*/;
-	this.name /*description*/ = name /* zamiast description*/ || 'No name given';
+	this.name = name /* zamiast description*/ || 'No name given';
 	this.element = createCard();
 
 	function createCard() {
@@ -21,16 +21,17 @@ function Card(id, name) {
 		return card;
 	}
 }
+
 Card.prototype = {
 	removeCard: function() {
-    var self = this;
-    $.ajax({
-      url: baseUrl + '/card/' + self.id,
-      method: 'DELETE',
-      success: function(){
-        self.element.remove();
-      }
-    });
-}
+	    var self = this;
+	    $.ajax({
+		    url: baseUrl + '/card/' + self.id,
+		    method: 'DELETE',
+		    success: function(){
+		       	self.element.remove();
+		    }
+	    });
 	}
 }
+	

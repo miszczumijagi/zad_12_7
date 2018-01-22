@@ -1,4 +1,4 @@
-$(function(){
+/*$(function(){
 
   // FUNKCJE POMOCNICZE
   function initSortable() {

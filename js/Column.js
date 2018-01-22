@@ -17,6 +17,7 @@ function Column(id, name) {
 		columnDelete.click(function() {
 			self.deleteColumn();
 		});
+
 		
 		columnAddCard.click(function(event) {
 			var cardName = prompt("Enter the name of the card");
@@ -40,7 +41,7 @@ function Column(id, name) {
 			.append(columnDelete)
 			.append(columnAddCard)
 			.append(columnCardList);
-			return column;
+		return column;
 		}
 	}
 Column.prototype = {
