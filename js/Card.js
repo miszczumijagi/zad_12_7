@@ -10,7 +10,7 @@ function Card(id, name) {
 		var card = $('<li class="card"></li>');
 		var cardDeleteBtn = $('<button class="btn-delete">x</button>');
 		var cardDescription = $('<p class="card-description"></p>');
-		var cardEdit = $('<button class="btn-edit">');
+		var cardEdit = $('<button class="btn-edit">Edit</button>');
 		
 		cardDeleteBtn.click(function(){
 			self.removeCard();
@@ -42,17 +42,18 @@ Card.prototype = {
 
 	editCard: function() {
 		var self = this;
-		newCardName = prompt('Edit your card:', self.name);
+		self.name = prompt('Edit your card:', self.name);
+		var parentColumn = self.element.parent(self.element);
 		$.ajax({
 			url: baseUrl + '/card/' + self.id,
 			method: 'PUT',
 			data: {
 				id: self.id,
 				name: self.name,
-				bootcamp_kanban_column_id: parseInt(parentColumn)
+				bootcamp_kanban_column_id: parentColumn,
 			},
 			success: function(response) {
-				self.element.children('.card-description').text(newCardName);
+				self.element.children('.card-description').text(self.name);
 			}
 		});
 

@@ -4,10 +4,23 @@ body {margin: 0;}
 .ui-sortable {
   min-height: 80px;
 }
+
+.create-column {
+  cursor: pointer;
+  border: 0;
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  height: 22px;
+}
+
+
 .btn-delete {
+  cursor: pointer;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 1px;
   width: 22px;
   height: 22px;
   border: 0;
@@ -37,9 +50,39 @@ body {margin: 0;}
 }
 .column-add-card {
   cursor: pointer;
-  text-decoration: underline;
-  margin: 5px 8px;
-  display: block;
+  position: absolute;
+  right: 68px;
+  top: 1px;
+  width: 68px;
+  height: 22px;
+  border: 0;
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+}
+
+.btn-col-edit {
+  cursor: pointer;
+  position: absolute;
+  right: 23px;
+  top: 1px;
+  width: 44px;
+  height: 22px;
+  border: 0;
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+}
+
+.btn-edit {
+  cursor: pointer;
+  position: absolute;
+  right: 23px;
+  top: 1px;
+  width: 44px;
+  height: 22px;
+  border: 0;
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+
 }
 
 /* STYLE KARTY */
