@@ -1,10 +1,10 @@
 // KLASA KANBAN CARD
-function Card(id, name, card.bootcamp_kanban_column_id) {
+function Card(id, name, bootcamp_kanban_column_id) {
 	var self = this;
 	
 	this.id = id /*zamiast funkcji randomString()*/;
 	this.name = name /* zamiast description*/ || 'No name given';
-	this.card.bootcamp_kanban_column_id = card.bootcamp_kanban_column_id;
+	this.bootcamp_kanban_column_id = bootcamp_kanban_column_id;
 	this.element = createCard();
 
 	function createCard() {
@@ -46,7 +46,7 @@ Card.prototype = {
 		var self = this;
 		self.name = prompt('Edit your card:', self.name);
 
-		var parentColumn =  self.card.bootcamp_kanban_column_id;
+		var parentColumn =  self.bootcamp_kanban_column_id;
 		$.ajax({
 			url: baseUrl + '/card/' + self.id,
 			method: 'PUT',
