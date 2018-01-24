@@ -21,7 +21,7 @@ function Card(id, name) {
 		});
 		
 		card.append(cardDeleteBtn);
-		card.append($cardEdit);
+		card.append(cardEdit);
 		cardDescription.text(self.name);
 		card.append(cardDescription);
 		return card;
@@ -38,7 +38,7 @@ Card.prototype = {
 		       	self.element.remove();
 		    }
 	    });
-	}
+	},
 
 	editCard: function() {
 		var self = this;

@@ -44,7 +44,7 @@ function Column(id, name) {
 			// KONSTRUOWANIE ELEMENTU KOLUMNY
 		column.append(columnTitle)
 			.append(columnDelete)
-			.append($columnEdit)
+			.append(columnEdit)
 			.append(columnAddCard)
 			.append(columnCardList);
 		return column;
@@ -64,7 +64,7 @@ Column.prototype = {
 		       	self.element.remove();
 		    }
 		});
-	}
+	},
 	editColumn: function() {
 		var self = this;
 		var newName = prompt('Edit your column:', self.name);
